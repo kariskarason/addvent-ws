@@ -19,12 +19,18 @@ import java.security.Principal;
 import java.util.List;
 
 @Controller
+@RequestMapping("/event")
 public class EventController {
 
     @Autowired
     private EventService eventService;
 
     private EventRepository eventRepository;
+
+    @Autowired
+    public EventController(EventRepository eventRepository) {
+        this.eventRepository = eventRepository;
+    }
 
     @RequestMapping("/")
     public String listAllEvents(Model model) {
