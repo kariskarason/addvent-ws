@@ -32,7 +32,7 @@ public class EventController {
         return "index";
     }
 
-    @RequestMapping("/getAllEvents")
+    @RequestMapping(value= "/getAllEvents", method = RequestMethod.GET)
     @ResponseBody
     public List<Event> getAllEvents() {
         List<Event> rides = eventRepository.findAllByOrderByTime();
