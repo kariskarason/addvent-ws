@@ -22,8 +22,8 @@ import java.util.List;
 @RequestMapping("/event")
 public class EventController {
 
-    @Autowired
-    private EventService eventService;
+    /*@Autowired
+    private EventService eventService;*/
 
     private EventRepository eventRepository;
 
@@ -32,11 +32,11 @@ public class EventController {
         this.eventRepository = eventRepository;
     }
 
-    @RequestMapping("/")
+    /*@RequestMapping("/")
     public String listAllEvents(Model model) {
         model.addAttribute("events", eventService.findAll());
         return "index";
-    }
+    }*/
 
     @RequestMapping(value= "/getAllEvents", method = RequestMethod.GET)
     @ResponseBody
@@ -50,7 +50,7 @@ public class EventController {
 
 
 
-    @RequestMapping("/event/add")
+    /*@RequestMapping("/event/add")
     public String formNewEvent(Model model) {
 
         if(!model.containsAttribute("event")) {
@@ -133,5 +133,5 @@ public class EventController {
         redirectAttributes.addFlashAttribute("flash",new FlashMessage("Viðburði hefur verið eytt!", FlashMessage.Status.SUCCESS));
 
         return "redirect:/";
-    }
+    }*/
 }
