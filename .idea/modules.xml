@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddventWebService.iml" filepath="$PROJECT_DIR$/.idea/modules/AddventWebService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddventWebService_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AddventWebService_main.iml" group="AddventWebService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddventWebService_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AddventWebService_test.iml" group="AddventWebService" />
+    </modules>
+  </component>
+</project>
