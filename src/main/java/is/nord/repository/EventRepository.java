@@ -13,7 +13,7 @@ public interface EventRepository extends CrudRepository<Event, Long> {
 
     // Returns the events ordered by time
     //@RestResource(rel = "all-events-in-order", path = "allEvents")
-    Iterable<Event> findAllByOrderByTime();
+    List<Event> findAllByOrderByTime();
 
     // Allow users to search titles og events
     //@RestResource(rel = "title-contains", path = "containsTitle")

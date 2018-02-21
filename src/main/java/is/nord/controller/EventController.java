@@ -3,6 +3,7 @@ package is.nord.controller;
 import is.nord.FlashMessage;
 import is.nord.model.Event;
 import is.nord.model.User;
+import is.nord.repository.EventRepository;
 import is.nord.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,12 +16,15 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class EventController {
 
     @Autowired
     private EventService eventService;
+
+    private EventRepository eventRepository;
 
     @RequestMapping("/")
     public String listAllEvents(Model model) {
@@ -30,8 +34,10 @@ public class EventController {
 
     @RequestMapping("/getAllEvents")
     @ResponseBody
-    public Iterable<Event> getAllEvents() {
-        return eventService.findAll();
+    public List<Event> getAllEvents() {
+        List<Event> rides = eventRepository.findAllByOrderByTime();
+        return rides;
+        //return eventService.findAll();
     }
 
 
