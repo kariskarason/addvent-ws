@@ -34,8 +34,8 @@ public class EventController {
 
     @RequestMapping(value= "/getAllEvents", method = RequestMethod.GET)
     @ResponseBody
-    public List<Event> getAllEvents() {
-        List<Event> rides = eventRepository.findAllByOrderByTime();
+    public Iterable<Event> getAllEvents() {
+        Iterable<Event> rides = eventRepository.findAll();
         return rides;
         //return eventService.findAll();
     }
